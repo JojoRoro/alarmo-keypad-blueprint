@@ -59,7 +59,7 @@ and select this blueprint URL to import it.
 
 ## 🚀 Direct Import
 Click below to import this blueprint directly into Home Assistant:
-[![Import Blueprint](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?url=https://github.com/DopeHead200/alarmo-keypad-blueprint/blob/main/blueprints/automation/dopehead/frient-keypad-alarmo.yaml)
+[![Import Blueprint](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?url=https://raw.githubusercontent.com/DopeHead200/alarmo-keypad-blueprint/main/blueprints/automation/dopehead/frient-keypad-alarmo.yaml)
 
 ⚙️ Configuration
 
