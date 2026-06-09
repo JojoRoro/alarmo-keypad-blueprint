@@ -1,15 +1,14 @@
 blueprint:
-  name: "Frient Zigbee Keypad with Alarmo (PINs managed in Alarmo)"
+  name: "Frient Zigbee Keypad with Alarmo (PINs managed in Alarmo) - Fixed"
   description: >
     This blueprint integrates the Frient Zigbee keypad with the Alarmo alarm control panel
     via Zigbee2MQTT. PINs and RFID tags are fully managed inside Alarmo — 
     the keypad simply passes user actions (arm/disarm/emergency) to Alarmo.
   domain: automation
-  author: Based on nelis and AndrejDelany blueprint. Modified by DopeHead200
+  author: Based on nelis and AndrejDelany blueprint. Modified by DopeHead200 & Gemini
   homeassistant:
     min_version: 2024.6.0
   source_url: "https://github.com/jan-grus/alarmo-keypad-blueprint"
-  version: "1.0.0"
 
   input:
     z2m_keypad_path:
@@ -72,6 +71,10 @@ triggers:
     entity_id: !input control_panel
     to: arming
     id: panel_arming
+  - trigger: state
+    entity_id: !input control_panel
+    to: armed_home
+    id: panel_armed_home
   - trigger: state
     entity_id: !input control_panel
     to: armed_night
