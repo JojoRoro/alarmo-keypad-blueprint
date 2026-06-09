@@ -112,8 +112,8 @@ actions:
             data:
               topic: !input z2m_keypad_path_set
               payload: '{ "arm_mode": { "mode": "exit_delay" } }'
-          - choose:
-              default: !input action_arming
+          - choose: []
+            default: !input action_arming
 
       - conditions:
           - condition: trigger
@@ -123,8 +123,8 @@ actions:
             data:
               topic: !input z2m_keypad_path_set
               payload: '{ "arm_mode": { "mode": "arm_all_zones" } }'
-          - choose:
-              default: !input action_armed_away
+          - choose: []
+            default: !input action_armed_away
 
       - conditions:
           - condition: trigger
@@ -134,8 +134,8 @@ actions:
             data:
               topic: !input z2m_keypad_path_set
               payload: '{ "arm_mode": { "mode": "disarm" } }'
-          - choose:
-              default: !input action_disarmed
+          - choose: []
+            default: !input action_disarmed
 
       - conditions:
           - condition: trigger
@@ -145,8 +145,8 @@ actions:
             data:
               topic: !input z2m_keypad_path_set
               payload: '{ "arm_mode": { "mode": "arm_day_zones" } }'
-          - choose:
-              default: !input action_armed_home
+          - choose: []
+            default: !input action_armed_home
 
       - conditions:
           - condition: trigger
@@ -156,8 +156,8 @@ actions:
             data:
               topic: !input z2m_keypad_path_set
               payload: '{ "arm_mode": { "mode": "arm_night_zones" } }'
-          - choose:
-              default: !input action_armed_night
+          - choose: []
+            default: !input action_armed_night
 
       - conditions:
           - condition: trigger
@@ -167,8 +167,8 @@ actions:
             data:
               topic: !input z2m_keypad_path_set
               payload: '{ "arm_mode": { "mode": "entry_delay" } }'
-          - choose:
-              default: !input action_pending
+          - choose: []
+            default: !input action_pending
 
       - conditions:
           - condition: trigger
@@ -178,8 +178,8 @@ actions:
             data:
               topic: !input z2m_keypad_path_set
               payload: '{ "arm_mode": { "mode": "in_alarm" } }'
-          - choose:
-              default: !input action_alarm
+          - choose: []
+            default: !input action_alarm
 
       # --- Keypad → Alarmo ---
       - conditions:
@@ -231,8 +231,8 @@ actions:
                   - condition: template
                     value_template: '{{ trigger.payload_json.action == "emergency" }}'
                 sequence:
-                  - choose:
-                      default: !input action_panic
+                  - choose: []
+                    default: !input action_panic
     default: []
 
 mode: parallel
